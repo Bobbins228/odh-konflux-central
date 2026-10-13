@@ -5,7 +5,7 @@ metadata:
   name: odh-pr-test-kuberay
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request]"
-    pipelinesascode.tekton.dev/on-target-branch: "[dev]"
+    pipelinesascode.tekton.dev/on-target-branch: "[*]"
 spec:
   timeouts:
     pipeline: 2h
