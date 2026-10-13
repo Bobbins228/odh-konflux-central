@@ -90,6 +90,7 @@ on:
           - praxis-ai-grid-operator
           - openshell-dashboard
           - llm-d-kv-cache
+          - opendatahub-db-operator
       pr_target_branch:
         description: 'Target branch for the PR (e.g. main)'
         required: true
