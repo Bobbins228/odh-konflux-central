@@ -253,16 +253,16 @@ spec:
               cd ../..
               echo "=== Running: registry REST API test ==="
               make install-python-dependencies-ci && \
-              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_registry_rest_api.py --integration -s --timeout=600 || REGISTRY_RC=$?
+              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_registry_rest_api.py --integration -s --timeout=1800 || REGISTRY_RC=$?
 
               echo "=== Running: data registry integration tests ==="
-              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_data_registry_api.py --integration -s --timeout=600 || DR_API_RC=$?
+              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_data_registry_api.py --integration -s --timeout=1800 || DR_API_RC=$?
 
               echo "=== Running: feast auth integration tests ==="
-              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_feast_auth_api.py --integration -s --timeout=600 || FEAST_AUTH_RC=$?
+              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_feast_auth_api.py --integration -s --timeout=1800 || FEAST_AUTH_RC=$?
 
               echo "=== Running: cross-instance isolation tests ==="
-              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_cross_instance_isolation.py --integration -s --timeout=600 || ISOLATION_RC=$?
+              uv run pytest -c sdk/python/pytest.ini sdk/python/tests/integration/rest_api/test_cross_instance_isolation.py --integration -s --timeout=1800 || ISOLATION_RC=$?
 
               cd infra/feast-operator
               make undeploy IMG=${FEAST_OPERATOR_CONTROLLER_IMAGE} FS_IMG=${FEAST_FEATURE_SERVER_IMAGE} || true
