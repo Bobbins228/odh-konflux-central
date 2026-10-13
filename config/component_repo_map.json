@@ -210,6 +210,9 @@
     "odh-ogx-k8s-operator-ci": "opendatahub/odh-ogx-k8s-operator",
     "odh-ogx-module-operator-ci": "opendatahub/odh-ogx-module-operator"
   },
+  "opendatahub-db-operator": {
+    "odh-db-operator-ci": "opendatahub/odh-db-operator"
+  },
   "opendatahub-operator": {
     "odh-operator-ci": "opendatahub/opendatahub-operator"
   },
