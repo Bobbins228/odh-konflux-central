@@ -29,6 +29,8 @@ spec:
     value: docker/Dockerfile.ubi9
   - name: path-context
     value: .
+  - name: hermetic
+    value: "true"
   pipelineRef:
     resolver: git
     params:
